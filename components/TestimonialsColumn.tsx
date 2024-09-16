@@ -1,9 +1,7 @@
 "use client";
-import { cn } from "@/utils/cn";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 type Testimonials = {
   text: string;
   imageSrc: string;
@@ -14,11 +12,11 @@ type Testimonials = {
 const TestimonialsColumn = ({
   props,
   className,
-  duration
+  duration,
 }: {
   props: Testimonials[];
   className?: string;
-  duration?: number
+  duration?: number;
 }) => {
   return (
     <div className={className}>
@@ -30,7 +28,7 @@ const TestimonialsColumn = ({
           duration: duration || 10,
           repeat: Infinity,
           ease: "linear",
-          repeatType: 'loop',
+          repeatType: "loop",
         }}
         className={`flex flex-col gap-6 pb-6`}
       >
